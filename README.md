@@ -1,5 +1,3 @@
-## Weekend Assignment 1
-
 ### Family Tree
 <hr />
 
