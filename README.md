@@ -1,7 +1,7 @@
 ### Family Tree
 <hr />
 
-We learned so much about trees this week! But what more important tree, than our family tree? ❤️ 👨‍👩‍👧‍👦 ❤️
+Trees are such an important structure in computer science. But what more important tree, than our family tree? ❤️ 👨‍👩‍👧‍👦 ❤️
 
 For this weekend assignment, you will have to build a tree that has multiple children. It will have a few methods:
 
