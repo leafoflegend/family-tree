@@ -115,6 +115,36 @@ describe('Family Tree', () => {
 
       expect(mikeNode instanceof FamilyTree).toEqual(true);
     });
+
+    test('Can find grandchild', () => {
+      const grandpa = new FamilyTree('Pop');
+      grandpa.insert('Mike');
+      const firstson = grandpa.findMember('Mike');
+      firstson.insert('Eliot');
+      firstson.insert('Elise');
+      firstson.insert('Cas');
+
+      const result = grandpa.findMember('Cas');
+
+      expect(result instanceof FamilyTree).toEqual(true);
+      expect(result.value).toEqual('Cas');
+    });
+
+    test('Can find great grandchild', () => {
+      const grandpa = new FamilyTree('Pop');
+      grandpa.insert('Mike');
+      const mike = grandpa.findMember('Mike');
+      mike.insert('Eliot');
+      const grandson = grandpa.findMember('Eliot');
+      grandson.insert('Mary');
+      grandson.insert('Nathan');
+      
+      const result = grandpa.findMember('Nathan');
+
+      expect(result instanceof FamilyTree).toEqual(true);
+      expect(result.value).toEqual('Nathan');
+    });
+
   });
 
   test('Has a log method.', () => {
